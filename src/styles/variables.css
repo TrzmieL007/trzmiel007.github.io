@@ -1,0 +1,65 @@
+:root {
+    /* Colors */
+    --accent: #33a6dd;
+    --background-down: #e4e4e4;
+    --background-down-dark: #222323;
+    --background-up: #f4f4f5;
+    --background-up-dark: #020202;
+    --card-background: #e4e3e3;
+    --card-background-dark: #222323;
+    --card-border: #939494;
+    --card-border-dark: #020202;
+    --foreground-color: #020202;
+    --foreground-color-dark: #f3f4f5;
+    --text-color: #020202;
+    --text-color-dark: #EEEEEE;
+    --secondary-text-color: #3C3C4399;
+    --secondary-text-color-dark: #EBEBF599;
+    --overlay-bgcolor: #414141;
+    --new-gradient-down: #32a7dc;
+    --new-gradient-down-dark: #3d67b9;
+    --new-gradient-up: #3c67b9;
+    --new-gradient-up-dark: #0a02b9;
+    --removed-color: #690302;
+    --succes-color: #1d8e05;
+    --error-color: #680303;
+    --warning-color: #f4c50d;
+    --info-color: #33a6dd;
+    --unclasified-color: #b8b8b8;
+
+    --background-gradient: linear-gradient(-45deg, var(--background-up), var(--background-down));
+    --background-gradient-dark: linear-gradient(-45deg, var(--background-up-dark), var(--background-down-dark));
+    --new-gradient: linear-gradient(-45deg, var(--new-gradient-up), var(--new-gradient-down));
+    --new-gradient-dark: linear-gradient(-45deg, var(--new-gradient-up-dark), var(--new-gradient-down-dark));
+
+    /* Sizes */
+    --spacing-xs: .125rem;
+    --spacing-s: .25rem;
+    --spacing: .5rem;
+    --spacing-l: .75rem;
+    --spacing-xl: 1rem;
+    --padding-xs: .25rem;
+    --padding-s: .5rem;
+    --padding: 1rem;
+    --padding-l: 1.5rem;
+    --padding-xl: 2rem;
+    --border-radius: .8rem;
+
+    /* Fonts */
+    --font-xs-black: 900 0.75rem / 1rem Helvetica;
+    --font-s-black: 900 0.875rem / 1.25rem Helvetica;
+    --font-m-black: 900 1rem / 1.5rem Helvetica;
+    --font-xs-bold: 700 0.75rem / 1rem Helvetica;
+    --font-s-bold: 700 0.875rem / 1.25rem Helvetica;
+    --font-m-bold: 700 1rem / 1.5rem Helvetica;
+    --font-xs-medium: 500 0.75rem / 1rem Helvetica;
+    --font-s-medium: 500 0.875rem / 1.25rem Helvetica;
+    --font-m-medium: 500 1rem / 1.5rem Helvetica;
+    --font-xs: 400 0.75rem / 1rem Helvetica;
+    --font-s: 400 0.875rem / 1.25rem Helvetica;
+    --font-m: 400 1rem / 1.5rem Helvetica;
+    --font-xs-light: 300 0.75rem / 1rem Helvetica;
+    --font-s-light: 300 0.875rem / 1.25rem Helvetica;
+    --font-m-light: 300 1rem / 1.5rem Helvetica;
+    /* Others */
+}

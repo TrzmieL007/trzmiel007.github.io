@@ -1,16 +1,18 @@
-import { Suspense } from 'react';
-import { Spinner } from 'components/Spinner';
+import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { isMobile } from 'react-device-detect';
-import { Router } from 'src/Providers/Router.tsx';
-import 'src/Styles/index.scss';
-import './i18n';
+import { BrowserRouter } from 'react-router';
+import App from './App.tsx';
+import './styles/variables.css';
+import GlobalStyle from './styles/globalStyles.ts';
+import { ThemeContextProvider } from './styles/ThemeContextProvider.tsx';
 
-const root = createRoot(document.getElementById('root') as HTMLElement);
-if (isMobile) document.documentElement.classList.add('isMobile');
-
-root.render(
-    <Suspense fallback={<Spinner size="full-page" />}>
-        {Router}
-    </Suspense>
+createRoot(document.getElementById('root')!).render(
+    <StrictMode>
+        <ThemeContextProvider>
+            <BrowserRouter>
+                <GlobalStyle />
+                <App />
+            </BrowserRouter>
+        </ThemeContextProvider>
+    </StrictMode>,
 );
