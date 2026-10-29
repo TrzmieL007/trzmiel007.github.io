@@ -1,0 +1,31 @@
+{
+  "carFinder": {
+    "title": "Car Finder (Poland)",
+    "supportLink": "If you need support with the app. Please go to our <link /> for more guidance.",
+    "privacyPolicyLink": "The app uses your data to customize the ads for you. You can read the <link /> document to find out more."
+  },
+  "whatIdo": {
+    "title": "My every days' work"
+  },
+  "home": {
+    "title": "HOME sweet Home"
+  },
+  "common": {
+    "loading": "Loading..."
+  },
+  "goBackHme": "Go back home",
+  "choseColorTheme": "Color theme",
+  "canNotLoadContent": "Unable to load the content.",
+  "lang": {
+    "choseLanguage": "Language",
+    "en": "English",
+    "pl": "Polish"
+  },
+  "navigation": {
+    "/": "Home",
+    "/carFinder": "Car Finder App",
+    "/carFinder/privacyPolicy": "Privacy Policy",
+    "/carFinder/support": "Support page",
+    "/aboutMyWork": "About my work"
+  }
+}

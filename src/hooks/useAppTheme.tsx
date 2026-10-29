@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { ThemeContext, supportedThemes } from '../styles/ThemeContextProvider.tsx';
+import { ThemeContext, supportedThemes } from '../Providers/ThemeContextProvider.tsx';
 import type { SupportedTheme, SystemTheme } from '../types';
 import { AppThemeContainer, AppThemeSwitch } from './appThemeSwitch.style.ts';
 import { useTranslation } from 'react-i18next';

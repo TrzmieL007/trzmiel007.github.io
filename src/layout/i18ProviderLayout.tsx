@@ -17,7 +17,7 @@ export default function LanguageLayout() {
     }, [lang]);
 
     if (lang !== 'pl' && lang !== 'en') {
-        return <Navigate to="/pl/notFound" replace />;
+        return <Navigate to="/en/notFound" replace />;
     }
 
     return [

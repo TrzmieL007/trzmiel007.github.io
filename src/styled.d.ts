@@ -7,6 +7,8 @@ declare module 'styled-components' {
             accent: string;
             text: string;
             textSecondary: string;
+            link: string;
+            activeLik: string;
         };
         border: string;
     }

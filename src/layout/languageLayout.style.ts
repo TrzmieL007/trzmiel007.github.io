@@ -25,8 +25,16 @@ export const PageContainer = styled.div`
         flex-basis: 12rem;
         display: flex;
         flex-direction: column;
+        flex-shrink: 0;
         align-items: stretch;
+        gap: var(--spacing-s);
         border-right: ${({ theme }) => theme.border};
+        a { padding-bottom: .5rem; }
+        hr {
+            border: none;
+            border-top: 1px solid ${({ theme }) => theme.colors.textSecondary};
+            width: 100%;
+        }
     }
     main { margin-left: var(--spacing); }
 `;

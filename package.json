@@ -5,11 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && cp docs/index.html docs/404.html",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "dompurify": "^3.4.17",
+    "eslint-plugin-react-dom": "^5.28.8",
+    "eslint-plugin-react-x": "^5.28.8",
+    "html-react-parser": "^6.1.9",
     "i18next": "^26.5.11",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",

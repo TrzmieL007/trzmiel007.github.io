@@ -20,7 +20,16 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* aliasing */
+    "paths": {
+      "/*": ["./src/*"],
+      "types/*": ["./src/types/*"],
+      "types": ["./src/types/index.ts"],
+      "components/*": ["./src/components/*"],
+      "assets/*": ["./src/assets/*"]
+    }
   },
   "include": ["src"]
 }
