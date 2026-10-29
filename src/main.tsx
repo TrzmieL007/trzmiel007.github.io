@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router';
 import App from './App.tsx';
 import './styles/variables.css';
 import GlobalStyle from './styles/globalStyles.ts';
-import { ThemeContextProvider } from './styles/ThemeContextProvider.tsx';
+import { ThemeContextProvider } from './Providers/ThemeContextProvider.tsx';
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>

@@ -1,0 +1,28 @@
+{
+  "carFinder": {
+    "title": "Car Finder",
+    "supportLink": "Jeśli masz problem z aplikacją, przejdź na stronę <link /> aby uzyskać wsparcie",
+    "privacyPolicyLink": "Aplikacja używa danych o przeglądanych reklamach aby lepiej personalizować ich wyświetlanie. Możesz się zapoznać z <link /> aby dowiedzieć się więcej."
+  },
+  "whatIdo": {
+    "title": "Moja praca na codzień"
+  },
+  "home": {
+    "title": "HOME sweet Home"
+  },
+  "canNotLoadContent": "Błąd ładowania zawartości strony.",
+  "goBackHme": "Wróć do strony domowej",
+  "choseColorTheme": "Motyw kolorystyczny",
+  "lang": {
+    "en": "Angielski",
+    "pl": "Polski",
+    "choseLanguage": "Język"
+  },
+  "navigation": {
+    "/": "Strona domowa",
+    "/carFinder": "Szukacz samochodu",
+    "/carFinder/privacyPolicy": "Polityką Prywatności",
+    "/carFinder/support": "Pomocy",
+    "/aboutMyWork": "Czym się zajmuję"
+  }
+}

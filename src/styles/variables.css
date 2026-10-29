@@ -13,8 +13,12 @@
     --foreground-color-dark: #f3f4f5;
     --text-color: #020202;
     --text-color-dark: #EEEEEE;
+    --link-color: #0900d1;
+    --link-color-dark: #3da8ff;
+    --active-link-color: #004083;
+    --active-link-color-dark: #003a85;
     --secondary-text-color: #3C3C4399;
-    --secondary-text-color-dark: #EBEBF599;
+    --secondary-text-color-dark: #EBEBF5;
     --overlay-bgcolor: #414141;
     --new-gradient-down: #32a7dc;
     --new-gradient-down-dark: #3d67b9;

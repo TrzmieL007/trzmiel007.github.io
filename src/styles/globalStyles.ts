@@ -29,12 +29,14 @@ const GlobalStyle = createGlobalStyle`
     }
     
     a {
-        color: inherit;
+        color: ${({ theme }) => theme.colors.link};
         text-decoration: none;
         cursor: pointer;
+        font-weight: 300;
         &.active {
+            color: ${({ theme }) => theme.colors.activeLik};
             cursor: default;
-            color: var(--secondary-text-color);
+            font-weight: 400;
         }
     }
     

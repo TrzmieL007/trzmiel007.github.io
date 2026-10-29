@@ -5,8 +5,8 @@ import {
     type ReactNode, useCallback,
 } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { lightTheme, darkTheme } from './theme';
-import type { SupportedTheme, SystemTheme } from '../types';
+import { lightTheme, darkTheme } from '../styles/theme.ts';
+import type { SupportedTheme, SystemTheme } from 'types';
 import type { DefaultTheme } from 'styled-components/dist/models/ThemeProvider';
 
 const LocalStorageThemeKey = 'theme';
@@ -15,6 +15,7 @@ type Theme = { key: SupportedTheme; value: DefaultTheme };
 type ThemeContextValue = {
     theme: SupportedTheme;
     setTheme: (mode: SupportedTheme) => void;
+    systemTheme: SystemTheme;
 };
 
 const themeMap: Map<SupportedTheme, DefaultTheme | undefined> = new Map<SupportedTheme, DefaultTheme | undefined>([
@@ -57,11 +58,12 @@ export function ThemeContextProvider({ children }: ThemeContextProviderPros) {
         document.documentElement.style.colorScheme = theme.key;
     }, [theme.key]);
 
+    const themeKey = theme.key === 'system' ? systemTheme : theme.key;
     const themeValue: DefaultTheme = theme.key === 'system'
         ? themeMap.get(systemTheme) ?? lightTheme
         : theme.value;
 
-    return <ThemeContext.Provider value={{ theme: theme.key, setTheme: switchTheme }}>
+    return <ThemeContext.Provider value={{ theme: themeKey, setTheme: switchTheme, systemTheme: systemTheme }}>
         <ThemeProvider theme={themeValue}>{children}</ThemeProvider>
     </ThemeContext.Provider>;
 }

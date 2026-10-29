@@ -1,7 +1,7 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import pl from './locales/pl.json';
-import en from './locales/en.json';
+import pl from '../public/locales/pl.json';
+import en from '../public/locales/en.json';
 // @ts-ignore
 import type { Resource } from 'i18next/typescript/options';
 import type { SupportedLanguages } from './types';

@@ -1,59 +1,46 @@
 import { styled, css } from 'styled-components';
-import type { SupportedTheme } from '../types';
+import type { SupportedTheme, SystemTheme } from 'types';
+import { OptionElement } from 'components/Selector/selector.style.ts';
 import { lightTheme, darkTheme } from '../styles/theme.ts';
+import { supportedThemes } from '/Providers/ThemeContextProvider.tsx';
 
-const lightThemeCss = css`
+const lightThemeCss = `
     background: ${lightTheme.colors.background};
     color: ${lightTheme.colors.text};
     border: ${lightTheme.border};
 `;
-const darkThemeCss = css`
+const darkThemeCss = `
     background: ${darkTheme.colors.background};
     color: ${darkTheme.colors.text};
     border: ${darkTheme.border};
-`;
-const systemCss = css`
-    background: ${({ theme }) => theme.colors.background};
-    color: ${({ theme }) => theme.colors.text};
-    border: ${({ theme }) => theme.border};
 `;
 
 const getStyleForTheme = (theme: SupportedTheme) => {
     switch (theme) {
         case 'dark': return darkThemeCss;
         case 'light': return lightThemeCss;
-        default: return systemCss;
+        default: return '';
     }
 }
 const getBorderForTheme = (theme: SupportedTheme) => {
     switch (theme) {
         case 'dark': return css`${darkTheme.border};`;
         case 'light': return css`${lightTheme.border};`;
-        default: return css`${lightTheme.border};`;
+        default: return '';
     }
 }
 
-export const AppThemeSwitch = styled.button<{ $themeKey: SupportedTheme }>`
-    border-radius: 0;
-    border: ${({ theme }) => theme.border};
-    font: var(--font-xs);
-    padding: 0 var(--spacing);
-    line-height: 1.2rem;
-    ${({ $themeKey }) => getStyleForTheme($themeKey)};
-    &:first-child { border-radius: var(--border-radius) 0 0 var(--border-radius); }
-    &:last-child { border-radius: 0 var(--border-radius) var(--border-radius) 0; }
-    &:disabled {
-        &:not(:first-child) { border-left: ${({ $themeKey }) => getBorderForTheme($themeKey)}; }
-    }
-    &:not(:last-child) { border-right: none; }
-`;
-
-export const AppThemeContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    header {
-        font: var(--font-xs); 
-        margin-right: var(--spacing);
+export const AppThemeContainer = styled.div<{ $systemTheme: SystemTheme }>`
+    ${supportedThemes.map((theme: SupportedTheme) => `
+        ${OptionElement}[data-id="${theme}"] {
+            ${getStyleForTheme(theme)}
+            &.active:not(:nth-child(2)) { border-left: ${getBorderForTheme(theme)}; }
+        }
+    `).join('\n')}
+    ${OptionElement}[data-id="system"] {
+        ${({ $systemTheme }) => getStyleForTheme($systemTheme)}
+        &.active:not(:nth-child(2)) { 
+            border-left: ${({ $systemTheme }) => getBorderForTheme($systemTheme)};
+        }
     }
 `;
